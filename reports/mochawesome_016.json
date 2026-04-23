@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-23T17:56:22.562Z",
+    "end": "2026-04-23T17:56:24.667Z",
+    "duration": 2105,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8573ac7e-68f3-4b74-941d-772b93dd7785",
+      "title": "",
+      "fullFile": "cypress\\e2e\\dashboard\\product.cy.js",
+      "file": "cypress\\e2e\\dashboard\\product.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "70c50ca7-3d22-47d8-b1b3-ec2e204c00e5",
+          "title": "Product Flow",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "adds a product using custom command",
+              "fullTitle": "Product Flow adds a product using custom command",
+              "timedOut": null,
+              "duration": 2079,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login();\ncy.addProduct({\n  name: 'Test Widget',\n  price: '$99',\n  category: 'Tools'\n});\ncy.url().should('include', '/dashboard');",
+              "err": {},
+              "uuid": "117e5aec-4ebf-4c6c-b144-0261071b3c81",
+              "parentUUID": "70c50ca7-3d22-47d8-b1b3-ec2e204c00e5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "117e5aec-4ebf-4c6c-b144-0261071b3c81"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2079,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-22T23:42:33.625Z",
+    "end": "2025-06-22T23:42:35.041Z",
+    "duration": 1416,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "14a47106-f391-4de9-a595-4b5cc1ab40ff",
+      "title": "",
+      "fullFile": "cypress/e2e/dashboard/dashboard-intercept.cy.js",
+      "file": "cypress/e2e/dashboard/dashboard-intercept.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1c211314-f6c4-48ee-bb37-7b2bc8177cc1",
+          "title": "Dashboard with Network Spy",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logs in and confirms product list is visible",
+              "fullTitle": "Dashboard with Network Spy logs in and confirms product list is visible",
+              "timedOut": null,
+              "duration": 1398,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Spy on GET requests to /api/products\n// Even though the app doesn’t make this request, we show how intercept syntax works\ncy.intercept('GET', '/api/products').as('getProducts');\n// Use our custom command from earlier to simulate login\ncy.login(); // sets localStorage and redirects to dashboard\n// Visit the dashboard page\ncy.visit('/dashboard');\n// The app loads data with a 500ms artificial delay, so we wait for the UI\ncy.wait(500);\n// Assert that the real, static product data is displayed\ncy.contains('Coffee Beans');\ncy.contains('Bluetooth Speaker');\ncy.contains('Notebook');\n// Add a log so learners know intercept was set up\ncy.log('Intercept was registered, even if not triggered.');",
+              "err": {},
+              "uuid": "c194c953-1a22-412d-8296-0f264694b6d6",
+              "parentUUID": "1c211314-f6c4-48ee-bb37-7b2bc8177cc1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "c194c953-1a22-412d-8296-0f264694b6d6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1398,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

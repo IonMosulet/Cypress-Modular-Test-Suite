@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-06-22T23:42:31.499Z",
+    "end": "2025-06-22T23:42:32.952Z",
+    "duration": 1453,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "8a303a9d-f38b-484f-89ad-0fe46d960d2a",
+      "title": "",
+      "fullFile": "cypress/e2e/dashboard/dashboard-flaky.cy.js",
+      "file": "cypress/e2e/dashboard/dashboard-flaky.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5f3ff5ad-8441-4acd-987d-de38856915da",
+          "title": "Flaky Dashboard Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "waits correctly for product data to load",
+              "fullTitle": "Flaky Dashboard Test waits correctly for product data to load",
+              "timedOut": null,
+              "duration": 1423,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('/dashboard');\n// Wait for the container and then assert\ncy.get('.products-list').should('contain', 'Notebook');",
+              "err": {},
+              "uuid": "2e114809-d4e8-46ba-a431-0ca117bf8fea",
+              "parentUUID": "5f3ff5ad-8441-4acd-987d-de38856915da",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2e114809-d4e8-46ba-a431-0ca117bf8fea"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1423,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

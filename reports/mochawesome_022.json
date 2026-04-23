@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2026-04-23T18:05:10.526Z",
+    "end": "2026-04-23T18:05:11.408Z",
+    "duration": 882,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5647b8e0-1658-4345-9699-f35886645753",
+      "title": "",
+      "fullFile": "cypress\\e2e\\auth\\login-fixture.cy.js",
+      "file": "cypress\\e2e\\auth\\login-fixture.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3c3ca2e0-3dc9-4ff5-9efa-a93a2f18ffa3",
+          "title": "Login Flow with Fixture",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "logs in using fixture data",
+              "fullTitle": "Login Flow with Fixture logs in using fixture data",
+              "timedOut": null,
+              "duration": 852,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.fixture('user').then(user => {\n  cy.visit('/login');\n  cy.get('#email').type(user.email);\n  cy.get('#password').type(user.password);\n  cy.get('button[type=\"submit\"]').click();\n  cy.url().should('include', '/dashboard');\n});",
+              "err": {},
+              "uuid": "210604d8-2c96-48f5-88f6-fedbad15fe8d",
+              "parentUUID": "3c3ca2e0-3dc9-4ff5-9efa-a93a2f18ffa3",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "210604d8-2c96-48f5-88f6-fedbad15fe8d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 852,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}
